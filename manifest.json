@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bitbucket issues prettify",
+  "description": "This extension change Bitbucket issues view more pretty.",
+  "version": "1.0",
+
+  "content_scripts": [
+      {
+        "matches": ["https://bitbucket.org/*/*/issues?*"],
+        "js": ["pretty.js"],
+        "run_at": "document_end"
+      }
+    ],
+  "browser_action": {
+      "default_icon": "icon.png"
+    }
+}
